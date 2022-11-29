@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('modelname');
             $table->integer('quantity');
             $table->string('remark');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('articles')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

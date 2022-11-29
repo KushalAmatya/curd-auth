@@ -23,7 +23,8 @@ class curdController extends Controller
 
     public function viewtable()
     {
-        return view('viewtable',['items'=>curd::all()]);
+        $items = curd::where('user_id','=',auth()->user()->id)->get();
+        return view('viewtable',compact('items'));
     }
 
 

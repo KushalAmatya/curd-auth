@@ -7,7 +7,7 @@
                     <th>Brand Name</th>
                     <th>Model Name</th>
                     <th>Quantity</th>
-                    <th>Added Date</th>
+                    <th>Added By</th>
                     <th>Remark</th>
                     <th>Action</th>
 
@@ -29,7 +29,7 @@
                                 {{$value->quantity}}
                             </td>
                             <td>
-                                {{$value->created_at}}
+                                {{$value->article->username}}
                             </td>
                             <td>
                                 {{$value->remark}}
