@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class curd extends Model
 {
     use HasFactory;
-    protected $fillable = ['brandname','modelname','quantity','remark'];
+    protected $fillable = ['brandname','modelname','quantity','image','remark'];
 
 }

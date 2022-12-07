@@ -10,14 +10,17 @@ class curdController extends Controller
     //
     public function create(Request $req)
     {
+         $image = $req->file('image');
+         $response = $image->store('image','public');
+
         curd::create([
             "brandname" => $req->brandname,
             "modelname" => $req->modelname,
             "quantity" => $req->quantity,
             "remark" => $req->remark,
-
+            "image" =>$response,
         ]);
-
+      
         return redirect()->route('home');
     }
 

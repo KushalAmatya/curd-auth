@@ -9,6 +9,7 @@
                     <th>Quantity</th>
                     <th>Added Date</th>
                     <th>Remark</th>
+                    <th>Image</th>
                     <th>Action</th>
 
 
@@ -33,6 +34,9 @@
                             </td>
                             <td>
                                 {{$value->remark}}
+                            </td>
+                            <td>
+                                <img src="/storage/{{$value->image}}" alt="" class="w-25 h-25">
                             </td>
                             <td>
                                 <a class="btn btn-success" href="/edit/{{$value->id}}">Edit</a>

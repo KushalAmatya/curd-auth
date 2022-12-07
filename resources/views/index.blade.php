@@ -9,7 +9,7 @@
     {{-- <div class="text-center mb-5">
         </div> --}}
         <div class="">
-            <form class="col-6 mx-auto" action="{{route('create')}}" method="POST">
+            <form class="col-6 mx-auto" action="{{route('create')}}" method="POST" enctype="multipart/form-data">
                 @csrf
             <div class="mb-3">
                 <label for="" class="form-label">Brand Name</label>
@@ -29,6 +29,12 @@
                 <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="remark"></textarea>
                 <label for="floatingTextarea">Remarks</label>
             </div>
+             <div class="mb-3">
+                <label for="" class="form-label">Insert Image</label>
+                <input type="file" class="form-control" id="" name="image">
+                
+            </div>
+            
             <button type="submit" class="btn btn-primary mt-3">Save</button>
             </form>
         </div>

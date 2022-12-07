@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('modelname');
             $table->integer('quantity');
             $table->string('remark');
+            $table->string('image');
+
             $table->timestamps();
         });
     }
